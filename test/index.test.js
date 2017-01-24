@@ -40,7 +40,7 @@ test('ResponsiveEmbed renders with default props', (t) => {
   renderer.render(element)
   const root = renderer.getRenderOutput()
   const child = root.props.children
-
+  
   t.plan(4)
   t.is(root.type, 'div', 'Root element is a div')
   t.is(root.props.style.paddingBottom, '56.25%', 'Aspect ratio of 16x9 is manifest as a paddingBottom style of 56.25%')

@@ -4,19 +4,47 @@
   "description": "Embed iframes responsively",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "docs": "static-react docs/components/Page.js > docs/index.html"
   },
   "author": "oilzilla <oli@tableflip.io>",
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.17.0",
     "react-addons-test-utils": "^15.0",
-    "react-dom": "^15.0"
+    "react-dom": "^15.0",
+    "static-react": "^3.2.0"
   },
   "peerDependencies": {
     "react": "^15.0"
   },
   "engines": {
     "node": ">=6.0"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "ava": "^0.17.0",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "static-react": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tableflip/react-responsive-embed.git"
+  },
+  "keywords": [
+    "react",
+    "responsive",
+    "iframe",
+    "aspect",
+    "ratio"
+  ],
+  "bugs": {
+    "url": "https://github.com/tableflip/react-responsive-embed/issues"
+  },
+  "homepage": "https://github.com/tableflip/react-responsive-embed#readme"
 }

@@ -33,7 +33,7 @@ const ratioToPercent = (ratio) => {
 const ResponsiveEmbed = (props) => {
   const paddingBottom = ratioToPercent(props.ratio)
   const style = Object.assign({}, divStyle, {paddingBottom})
-  const iframeProps = Object.assign({}, props, {style: iframeStyle})
+  const iframeProps = Object.assign({frameBorder: 0}, props, {style: iframeStyle})
   return div({style},
     iframe(iframeProps)
   )
@@ -47,7 +47,7 @@ ResponsiveEmbed.defaultProps = {
 ResponsiveEmbed.propTypes = {
   src: PropTypes.string,
   ratio: (props, propName, componentName) => {
-    if (/\d+:\d+/.test(props[propName])) {
+    if (!/\d+:\d+/.test(props[propName])) {
       return new Error(
         'Invalid ratio supplied to ResponsiveEmbed. Expected a string like "16:9" or any 2 numbers seperated by a colon'
       )
