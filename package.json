@@ -14,6 +14,7 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-cli": "^6.22.2",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-preset-env": "^1.1.8",
     "react-addons-test-utils": "^15.0",
     "react-dom": "^15.0",
@@ -25,9 +26,9 @@
   "engines": {
     "node": ">=6.0"
   },
-  "directories": {
-    "doc": "docs",
-    "test": "test"
+  "ava": {
+    "require": ["babel-register"],
+    "babel": "inherit"
   },
   "repository": {
     "type": "git",
