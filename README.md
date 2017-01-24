@@ -19,7 +19,7 @@ Then in your app import `ResponsiveEmbed` and in JSX flavour you might do:
 
 Which'd give you an `iframe` element pointing at the `src` and any other props.
 It's wrapped in a `div` with just the right amount of `padding-bottom` to
-preserve a **16:9** aspect ratiom like so:
+preserve a **16:9** aspect ratio like so:
 
 ```html
 <div style="position:relative;height:0;overflow:hidden;max-width:100%;padding-bottom:56.25%;">
@@ -32,7 +32,7 @@ preserve a **16:9** aspect ratiom like so:
 
 Pass in a `ratio` prop to pick a different one. Any ratio will do:
 
-```
+```html
 <ResponsiveEmbed src='https://www.youtube.com/embed/2yqz9zgoC-U' ratio='4:3' />
 ```
 
