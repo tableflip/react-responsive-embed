@@ -1,0 +1,22 @@
+{
+  "name": "react-responsive-embed",
+  "version": "1.0.0",
+  "description": "Embed iframes responsively",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "oilzilla <oli@tableflip.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "react-addons-test-utils": "^15.0",
+    "react-dom": "^15.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0"
+  },
+  "engines": {
+    "node": ">=6.0"
+  }
+}
