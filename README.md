@@ -14,7 +14,9 @@ npm install --save react-responsive-embed
 Then in your app import `ResponsiveEmbed` and in JSX flavour you might do:
 
 ```html
-<ResponsiveEmbed src='https://www.youtube.com/embed/2yqz9zgoC-U' allowfullscreen />
+<ResponsiveEmbed>
+  <iframe src='https://www.youtube.com/embed/2yqz9zgoC-U' frameborder="0" allowfullscreen />
+</ResponsiveEmbed>
 ```
 
 Which'd give you an `iframe` element pointing at the `src` and any other props.
@@ -23,25 +25,29 @@ preserve a **16:9** aspect ratio like so:
 
 ```html
 <div style="position:relative;height:0;overflow:hidden;max-width:100%;padding-bottom:56.25%;">
-  <iframe src="https://www.youtube.com/embed/2yqz9zgoC-U"  
-    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;",
+    src="https://www.youtube.com/embed/2yqz9zgoC-U"
     frameborder="0"
     allowfullscreen></iframe>
 </div>
 ```
 
-Pass in a `ratio` prop to pick a different one. Any ratio will do:
+Pass a `ratio` property to pick a different one. Any ratio will do:
 
 ```html
-<ResponsiveEmbed src='https://www.youtube.com/embed/2yqz9zgoC-U' ratio='4:3' />
+<ResponsiveEmbed ratio='4:3'>
+  <iframe src='https://www.youtube.com/embed/2yqz9zgoC-U' allowfullscreen />
+</ResponsiveEmbed>
 ```
 
-`frameborder="0"` is applied by default.
+`frameborder="0"` is applied to the child element for you.
 
+You can pass any child element to ResponsiveEmbed. It doesn't have to be an
+iframe.
 
 ## Browserify / Webpack / Other?
 
-**This module is just a function**. It's been babelified so it'll work with 
+**This module is just a function**. It's been babelified so it'll work with
 whatever your set up is. Use browserify or webpack or any other npm module
 consuming bundle whizzbang; ResponsiveEmbed don't mind.
 
