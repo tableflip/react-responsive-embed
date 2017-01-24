@@ -1,7 +1,7 @@
 const test = require('ava')
 const React = require('react')
 const ReactTestUtils = require('react-addons-test-utils')
-const ResponsiveEmbed = require('../index')
+const ResponsiveEmbed = require('../src/index')
 
 test('ResponsiveEmbed renders OK', (t) => {
   const src = 'https://www.youtube.com/embed/zc1g_hSuxVE'
@@ -40,7 +40,7 @@ test('ResponsiveEmbed renders with default props', (t) => {
   renderer.render(element)
   const root = renderer.getRenderOutput()
   const child = root.props.children
-  
+
   t.plan(4)
   t.is(root.type, 'div', 'Root element is a div')
   t.is(root.props.style.paddingBottom, '56.25%', 'Aspect ratio of 16x9 is manifest as a paddingBottom style of 56.25%')

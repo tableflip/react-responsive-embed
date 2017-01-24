@@ -39,12 +39,11 @@ Pass in a `ratio` prop to pick a different one. Any ratio will do:
 `frameborder="0"` is applied by default.
 
 
-## Browserify or Webpack?
+## Browserify / Webpack / Other?
 
-**This module is just a function**. It doesn't require any babel, ES6, JSX or
-other transpilation. It'll work with whatever your set up is. Use browserify or
-webpack or any other npm module consuming bundle whizzbang;
-ResponsiveEmbed don't mind.
+**This module is just a function**. It's been babelified so it'll work with 
+whatever your set up is. Use browserify or webpack or any other npm module
+consuming bundle whizzbang; ResponsiveEmbed don't mind.
 
 ---
 
