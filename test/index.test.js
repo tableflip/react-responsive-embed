@@ -1,6 +1,6 @@
 const test = require('ava')
 const React = require('react')
-const ReactTestUtils = require('react-addons-test-utils')
+const ReactTestUtils = require('react-dom/test-utils')
 const ResponsiveEmbed = require('../src/index')
 
 test('ResponsiveEmbed renders OK', (t) => {

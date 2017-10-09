@@ -2,25 +2,22 @@
   "name": "react-responsive-embed",
   "version": "2.0.0",
   "description": "Embed iframes responsively",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "ava",
-    "prepublish": "npm run build",
-    "build": "babel src -d lib",
     "docs": "static-react docs/components/Page.js > docs/index.html"
   },
   "author": "oilzilla <oli@tableflip.io>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.17.0",
-    "babel-cli": "^6.22.2",
-    "babel-preset-env": "^1.1.8",
-    "react-addons-test-utils": "^15.0",
+    "ava": "^0.22",
     "react-dom": "^15.0",
-    "static-react": "^3.2.0"
+    "react": "^15.0",
+    "static-react": "^3.2"
   },
   "peerDependencies": {
-    "react": "^15.0"
+    "prop-types": "^15.0 ||^16.0",
+    "react": "^15.0 ||^16.0"
   },
   "engines": {
     "node": ">=6.0"
