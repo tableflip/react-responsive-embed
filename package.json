@@ -12,15 +12,15 @@
   "author": "oilzilla <oli@tableflip.io>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.17.0",
-    "babel-cli": "^6.22.2",
-    "babel-preset-env": "^1.1.8",
-    "react-addons-test-utils": "^15.0",
-    "react-dom": "^15.0",
-    "static-react": "^3.2.0"
+    "ava": "^0.17",
+    "babel-cli": "^6.22",
+    "babel-preset-env": "^1.1",
+    "react-addons-test-utils": ">=15.0, <17.0",
+    "react-dom": ">=15.0, <17.0",
+    "static-react": "^3.2"
   },
   "peerDependencies": {
-    "react": "^15.0"
+    "react": ">=15.0,<17.0"
   },
   "engines": {
     "node": ">=6.0"
@@ -43,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/tableflip/react-responsive-embed/issues"
   },
-  "homepage": "https://github.com/tableflip/react-responsive-embed#readme"
+  "homepage": "https://github.com/tableflip/react-responsive-embed#readme",
+  "dependencies": {
+    "prop-types": ">=15.0, <17.0"
+  }
 }
