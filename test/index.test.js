@@ -1,12 +1,12 @@
 const test = require('ava')
 const React = require('react')
-const ReactTestUtils = require('react-addons-test-utils')
+const ShallowRenderer = require('react-test-renderer/shallow')
 const ResponsiveEmbed = require('../src/index')
 
 test('ResponsiveEmbed renders OK', (t) => {
   const src = 'https://www.youtube.com/embed/zc1g_hSuxVE'
   const element = React.createElement(ResponsiveEmbed, {src})
-  const renderer = ReactTestUtils.createRenderer()
+  const renderer = new ShallowRenderer()
   renderer.render(element)
   const root = renderer.getRenderOutput()
   const child = root.props.children
@@ -22,7 +22,7 @@ test('ResponsiveEmbed renders other ratios', (t) => {
   const src = 'https://www.youtube.com/embed/zc1g_hSuxVE'
   const ratio = '1.43:1' // imax
   const element = React.createElement(ResponsiveEmbed, {src, ratio})
-  const renderer = ReactTestUtils.createRenderer()
+  const renderer = new ShallowRenderer()
   renderer.render(element)
   const root = renderer.getRenderOutput()
   const child = root.props.children
@@ -36,7 +36,7 @@ test('ResponsiveEmbed renders other ratios', (t) => {
 
 test('ResponsiveEmbed renders with default props', (t) => {
   const element = React.createElement(ResponsiveEmbed)
-  const renderer = ReactTestUtils.createRenderer()
+  const renderer = new ShallowRenderer()
   renderer.render(element)
   const root = renderer.getRenderOutput()
   const child = root.props.children
