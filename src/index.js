@@ -1,5 +1,5 @@
 const React = require('react')
-const PropTypes = React.PropTypes
+const PropTypes = require('prop-types')
 const div = React.createElement.bind(React, 'div')
 const iframe = React.createElement.bind(React, 'iframe')
 
@@ -34,6 +34,7 @@ const ResponsiveEmbed = (props) => {
   const paddingBottom = ratioToPercent(props.ratio)
   const style = Object.assign({}, divStyle, {paddingBottom})
   const iframeProps = Object.assign({frameBorder: 0}, props, {style: iframeStyle})
+  delete iframeProps.ratio
   return div({style},
     iframe(iframeProps)
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import ResponsiveEmbed from '../../index'
+import ResponsiveEmbed from '../../lib/index'
 import Head from './head'
 
 const Page = () => (
