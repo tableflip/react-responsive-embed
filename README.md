@@ -14,7 +14,7 @@ npm install --save react-responsive-embed
 Then in your app import `ResponsiveEmbed` and in JSX flavour you might do:
 
 ```html
-<ResponsiveEmbed src='https://www.youtube.com/embed/2yqz9zgoC-U' allowfullscreen />
+<ResponsiveEmbed src='https://www.youtube.com/embed/2yqz9zgoC-U' allowFullScreen />
 ```
 
 Which'd give you an `iframe` element pointing at the `src` and any other props.
