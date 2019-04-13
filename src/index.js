@@ -33,6 +33,9 @@ const ratioToPercent = (ratio) => {
 const ResponsiveEmbed = (props) => {
   const paddingBottom = ratioToPercent(props.ratio)
   const style = Object.assign({}, divStyle, {paddingBottom})
+  if (props.style) {
+    iframeStyle = Object.assign(iframeStyle, props.style)
+  }
   const iframeProps = Object.assign({frameBorder: 0}, props, {style: iframeStyle})
   delete iframeProps.ratio
   return div({style},
