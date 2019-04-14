@@ -10,7 +10,7 @@ const divStyle = {
   maxWidth: '100%'
 }
 
-const iframeStyle = {
+let iframeStyle = {
   position: 'absolute',
   top: 0,
   left: 0,
